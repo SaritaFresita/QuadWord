@@ -1,4 +1,4 @@
-baseURL = "localhost"
+baseURL = "https://quadword.netlify.app"
 languageCode = "en-gb"
 title = "QuadWord"
 theme = "repo"
