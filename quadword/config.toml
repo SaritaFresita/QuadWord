@@ -1,0 +1,111 @@
+baseURL = "localhost"
+languageCode = "en-gb"
+title = "QuadWord"
+theme = "liva-hugo"
+summaryLength = "10"
+paginate = 6
+disqusShortname = ""
+
+[outputs]
+	home = ["HTML", "RSS", "JSON"]
+
+############################# Plugins ##############################
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/venobox/venobox.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/venobox/venobox.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/fuse.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/mark.js"
+  [[params.plugins.js]]
+  URL = "plugins/search/search.js"
+
+############################## navigation ###############################
+[menu]
+
+	[[menu.main]]
+	name = "About"
+	URL = "about"
+	weight = 1
+
+	[[menu.main]]
+	name = "Blog"
+	url = "blog"
+	weight = 2
+
+	[[menu.main]]
+	name = "Contact"
+	url = "contact"
+	weight = 3
+
+	# Footer menu
+	[[menu.footer]]
+	name = "About"
+	URL = "about"
+	weight = 1
+
+	[[menu.footer]]
+	name = "Blog"
+	URL = "blog"
+	weight = 2
+
+	[[menu.footer]]
+	name = "Contact"
+	URL = "contact"
+	weight = 3
+
+#################### default parameters ################################
+[params]
+logo = "/img/logo.png"
+home = "Home"
+
+# Meta data
+description = "Quadword: A blog about programming, hacking and anarchism"
+author = "Lovelace"
+
+# Google analytics
+googleAnalitycsID = ""
+
+# Contact information
+# none
+
+# Copyright
+copyright = "| copyright Lovelace &copy; 2022 |"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+# Search
+[params.search]
+enable = true
+
+############################# social site ########################
+[[params.social]]
+title = "twitter"
+icon = "ti-twitter-alt"
+link = "#"
+
+[[params.social]]
+title = "github"
+icon = "ti-github"
+link = "#"
