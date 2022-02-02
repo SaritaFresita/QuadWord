@@ -248,6 +248,6 @@ call it info (or whatever you want to call it) and initialise it to be 0x500:
 struct vbe_info *info = (struct vbe_info *)0x500;
 ```
 
-That structured will be used throughout this file several times to do drawing.
+That structure will be used throughout this file several times to do drawing.
 
 [You can see this entry's changes here](https://codeberg.org/QuadWord/Kinl)

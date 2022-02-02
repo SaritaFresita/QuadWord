@@ -53,3 +53,4 @@ flycheck_*.el
 /resources/_gen/
 docs/
 docs/*
+public

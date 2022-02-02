@@ -1,7 +1,7 @@
 baseURL = "localhost"
 languageCode = "en-gb"
 title = "QuadWord"
-theme = "liva-hugo"
+theme = "repo"
 summaryLength = "10"
 paginate = 6
 disqusShortname = ""

@@ -199,18 +199,18 @@ file. This rule looks like this:
 ```make
 sys/kernel.o: sys/kernel.c
 	@$(ECHO) "CC\t\t"$<
-	@$(CC) $(FLAGS) $(INCLUDES) -std=gnu99 -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -std=gnu99 -c $< -o $@
 ```
 
 That rule will ensure our C file gets compiled and our sys/kernel.out rule, will
 ensure they get linked properly, there's one last thing we must do, and we must
-add the `FLAGS` variable to that rule where we use our cross compiler, that rule
+add the `CFLAGS` variable to that rule where we use our cross compiler, that rule
 should look like this:
 
 ```make
 sys/kernel.out: $(OBJS)
 	@$(LD) -g -relocatable $(OBJS) -o sys/kernelfull.o
-	@$(CC) $(FLAGS) -T linker.ld -o $@ -ffreestanding -O0 -nostdlib sys/kernelfull.o
+	@$(CC) $(CFLAGS) -T linker.ld -o $@ -ffreestanding -O0 -nostdlib sys/kernelfull.o
 ```
 
 Now, let's call our C function, in our `kernel.asm` file. To do so, just declare
