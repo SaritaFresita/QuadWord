@@ -51,11 +51,6 @@ disqusShortname = ""
 	url = "blog"
 	weight = 2
 
-	[[menu.main]]
-	name = "Contact"
-	url = "contact"
-	weight = 3
-
 	# Footer menu
 	[[menu.footer]]
 	name = "About"
@@ -66,11 +61,6 @@ disqusShortname = ""
 	name = "Blog"
 	URL = "blog"
 	weight = 2
-
-	[[menu.footer]]
-	name = "Contact"
-	URL = "contact"
-	weight = 3
 
 #################### default parameters ################################
 [params]
