@@ -3,7 +3,7 @@ title: Introduction - Kernel Development - Part 1
 date: 2022-02-02T18:06:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "The first entry of the kernel development series on QuadWord"
 

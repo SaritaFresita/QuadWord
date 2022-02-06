@@ -3,7 +3,7 @@ title: Our First Bootloader - Kernel Development - Part 4
 date: 2022-02-02T18:12:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "Let's write our first bootloader"
 

@@ -3,7 +3,7 @@ title: Switching to Protected Mode - Kernel Development - Part 8
 date: 2022-02-02T18:20:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "Let's start working in Protected Mode"
 

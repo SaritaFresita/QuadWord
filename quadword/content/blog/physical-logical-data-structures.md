@@ -3,7 +3,7 @@ title: Physical vs Logical Data Structures
 date: 2022-02-04T16:32:54+00:00
 draft: false
 
-image: /img/dstructures1.png
+image: /img/thumbs/dstructures1.png
 
 description: "Learn the differences between Physical and Logical Data Structures"
 

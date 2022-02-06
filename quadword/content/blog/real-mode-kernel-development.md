@@ -3,7 +3,7 @@ title: Real Mode - Kernel Development - Part 3
 date: 2022-02-02T18:11:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "Learn what Real Mode is, and why it's important to know when developing a kernel"
 

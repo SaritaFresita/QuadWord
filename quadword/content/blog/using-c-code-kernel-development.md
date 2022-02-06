@@ -3,7 +3,7 @@ title: Using C Code - Kernel Development - Part 10
 date: 2022-02-02T18:24:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "We don't want to write our kernel only in Assembly, right? let's use C instead"
 
@@ -53,7 +53,7 @@ of code at the bottom (after we define the bss section). We do it at the bottom
 so the C code in the text section will never have the alignment damaged because
 of our assembly code:
 
-```ld-script
+```text
 .asm :
 {
 	*(.asm)

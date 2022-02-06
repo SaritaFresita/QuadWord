@@ -3,7 +3,7 @@ title: Switching to Graphics Mode - Kernel Development - Part 11
 date: 2022-02-02T18:26:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: ""
 

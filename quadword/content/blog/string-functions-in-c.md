@@ -3,7 +3,7 @@ title: String Functions in C
 date: 2022-02-03T16:47:29+00:00
 draft: false
 
-image: /img/strfunctions.png
+image: /img/thumbs/strfunctions.png
 
 description: Let's review some useful C functions to manipulate strings
 

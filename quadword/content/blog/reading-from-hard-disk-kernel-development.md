@@ -3,7 +3,7 @@ title: Reading From Hard Disk - Kernel Development - Part 7
 date: 2022-02-02T18:19:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "Let's learn from the hard disk in real mode now"
 

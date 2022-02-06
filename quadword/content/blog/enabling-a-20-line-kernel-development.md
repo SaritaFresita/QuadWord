@@ -3,7 +3,7 @@ title: Loading Kernel and Enabling A20 line - Kernel Development - Part 9
 date: 2022-02-02T18:22:00+00:00
 draft: false
 
-image: /img/kernel.png
+image: /img/thumbs/kernel.png
 
 description: "Let's load our kernel into memory and let's also enable the A20 line"
 
