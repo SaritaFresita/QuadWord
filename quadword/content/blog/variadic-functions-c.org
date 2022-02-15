@@ -280,3 +280,42 @@ between sum and count.
   of the argument list.
 - You must call `va_end' before you exit a function with a variable number of
   arguments, if you don't, the function will not work properly.
+
+* va_copy
+
+va_copy is a way to copy the arguments as `va_arg' doesn't provice a way to
+back up to previous arguments. It is possible that you may need to process a
+variable argument list more than once or to preserve a copy of the `va_list'
+variable.
+
+va_copy takes two arguments the destination and the source va_list. This is a
+little example on how it would be used:
+
+#+BEGIN_SRC C
+  va_list arg;
+  va_list arg_copy;
+
+  va_copy (arg_copy, arg);
+#+END_SRC
+
+That little snippet of code will copy the values of `arg' into `arg_copy' and
+now you could process `arg' and `arg_copy' independently to extract argument
+values `va_arg'.
+
+It's important to note that the `va_copy' function will copy the va_list exactly
+as it is, if you have alreadey exected `va_arg' to extract argument values from
+the list before calling `va_copy', the resulting va_List will be in an identical
+state to the source va_list.
+
+Don't use the same `va_list' variable as destination twice before calling
+`va_end' on it first, don't do this:
+
+#+BEGIN_SRC C
+  va_list arg;
+  va_list arg_copy;
+
+  va_copy (arg_copy, arg);
+  va_copy (arg_copy, another_valist);
+#+END_SRC
+
+You'd have to call `va_end' for `arg_copy' first.
