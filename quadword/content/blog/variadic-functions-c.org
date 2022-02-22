@@ -4,7 +4,7 @@
 #+image: /img/thumbs/va_funcs.png
 #+description: Variadic functions in the C programming language
 #+categories[]: C
-#+tags: Programming Beginners
+#+tags[]: Programming Beginners
 #+type: post
 
 * Variadic Functions in C
