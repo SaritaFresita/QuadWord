@@ -1,0 +1,88 @@
+#+title: Inline functions in C
+#+date: 2022-03-01T23:32:23+00:00
+#+draft: false
+#+image: /img/thumbs/inline_funcs.jpg
+#+description: Let's discuss about inline functions in the C programming language
+#+categories[]: C
+#+tags[]: Programming Beginners
+#+type: post
+
+* Inline functions in C
+
+Normally, a function call has overhead when being invoked, it takes execution
+time tp setup the call, pass arguments, jump to the function and return. C99
+added the concept of `inline' functions to try and avoid the amount of overhead
+that comes along with invoking a function.
+
+The point of making a function inline is to hint the compiler that it is worth
+making some form of extra effort to call the function faster than it would be
+otherwise, usually the compiler will substitute the code of the function into
+its callers (eliminating the need for a call and return sequence), the program
+no longer calls that function, the compiler replaces every call to an inline
+function with the code body of that function.
+
+The `inline' declaration is only an advice to the compiler, which can decide to
+ignore it. It may cause the compiler to replace the function call with inline
+code and/or perform some other sorts of optimizations, or it may just have no
+effect.
+
+Inline functions can improve the runtime performance of a program (even though,
+as mentioned before, it is not guaranteed to work, as it is just a "hint" or an
+"advice" to the compiler). Whether an inline functions serves your purpose in a
+positive or in a negative way, depends purely on your code design and it's
+largely debatable.
+
+It is also a common misconception that in-lining always makes the code faster,
+if there are many lines in an inline function or there are more function calls,
+then in-lining can cause wastage of space. Inline functions increase the file
+size, as the same function code is copied again and again in the program
+wherever it's called.
+
+It is suggested to only declare functions as inline if they are short and called
+frequently, for a long function, the time consumed in calling the function is
+short compared to the time spent executing the body of the function.
+
+** Declaring inline functions
+
+You can declare an inline function by placing the keyword `inline' before the
+function declaration, for example:
+
+#+BEGIN_SRC c
+inline void an_inline_func ();
+#+END_SRC
+
+Note that, the inline function definition has to be in the same file as the
+function call.
+
+You should always use the `inline' function specifier along with the static
+storage-class specifier (using `extern' makes the program less portable). Inline
+functions are usually defined before their first use in a file. for example:
+
+#+BEGIN_SRC c
+inline static void foo ()
+#+END_SRC
+
+** Declaring inline functions (in a multi-file program)
+
+If you have a multi-file program, you need an inline definition in each file
+that calls the function, the simplest way to accomplish this, is to put the
+inline definition in a header file and include it in the files that use the
+function. For example, let's suppose this is a file in my program called
+`foo.h':
+
+#+BEGIN_SRC c
+#ifndef __FOO_H
+#define __FOO_H
+
+inline static void
+foo ()
+{
+  // do something
+}
+
+#endif
+#+END_SRC
+
+An inline function, is an exception to the rule of not placing executable code
+in a header file, because the `inline' function has internal linkage, defining
+one in several files does not cause problems.
