@@ -11,7 +11,7 @@ categories:
   - Data Structures
 tags:
   - Beginners
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

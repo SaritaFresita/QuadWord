@@ -1,5 +1,5 @@
 ---
-title: Reading From Hard Disk - Kernel Development - Part 7
+title: Reading From Hard Disk - Kernel_Development - Part 7
 date: 2022-02-02T18:19:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "Let's learn from the hard disk in real mode now"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

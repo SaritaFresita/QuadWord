@@ -1,5 +1,5 @@
 ---
-title: Using C Code - Kernel Development - Part 10
+title: Using C Code - Kernel_Development - Part 10
 date: 2022-02-02T18:24:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "We don't want to write our kernel only in Assembly, right? let's use C instead"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

@@ -1,5 +1,5 @@
 ---
-title: Required Knowledge - Kernel Development - Part 2
+title: Required Knowledge - Kernel_Development - Part 2
 date: 2022-02-02T18:09:00+00:00
 draft: false
 
@@ -8,11 +8,11 @@ image: /img/thumbs/kernel.png
 description: "Let's talk a little about the required knowledge to develop a kernel"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

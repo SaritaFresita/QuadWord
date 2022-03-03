@@ -1,5 +1,5 @@
 ---
-title: Interrupt Vector Table - Kernel Development - Part 6
+title: Interrupt Vector Table - Kernel_Development - Part 6
 date: 2022-02-02T18:17:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "Let's learn what interrupts are and how we can create our own"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

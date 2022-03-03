@@ -1,5 +1,5 @@
 ---
-title: Real Mode - Kernel Development - Part 3
+title: Real Mode - Kernel_Development - Part 3
 date: 2022-02-02T18:11:00+00:00
 draft: false
 
@@ -8,11 +8,11 @@ image: /img/thumbs/kernel.png
 description: "Learn what Real Mode is, and why it's important to know when developing a kernel"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

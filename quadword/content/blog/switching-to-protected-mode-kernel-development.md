@@ -1,5 +1,5 @@
 ---
-title: Switching to Protected Mode - Kernel Development - Part 8
+title: Switching to Protected Mode - Kernel_Development - Part 8
 date: 2022-02-02T18:20:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "Let's start working in Protected Mode"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

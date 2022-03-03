@@ -1,5 +1,5 @@
 ---
-title: Introduction - Kernel Development - Part 1
+title: Introduction - Kernel_Development - Part 1
 date: 2022-02-02T18:06:00+00:00
 draft: false
 
@@ -8,7 +8,7 @@ image: /img/thumbs/kernel.png
 description: "The first entry of the kernel development series on QuadWord"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Low-level
   - Operating systems

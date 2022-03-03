@@ -1,5 +1,5 @@
 ---
-title: Switching to Graphics Mode - Kernel Development - Part 11
+title: Switching to Graphics Mode - Kernel_Development - Part 11
 date: 2022-02-02T18:26:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: ""
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: featured
 ---

@@ -1,5 +1,5 @@
 ---
-title: Loading Kernel and Enabling A20 line - Kernel Development - Part 9
+title: Loading Kernel and Enabling A20 line - Kernel_Development - Part 9
 date: 2022-02-02T18:22:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "Let's load our kernel into memory and let's also enable the A20 line"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---

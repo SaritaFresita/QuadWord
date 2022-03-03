@@ -1,5 +1,5 @@
 ---
-title: Making our Bootloader Bootable - Kernel Development - Part 5
+title: Making our Bootloader Bootable - Kernel_Development - Part 5
 date: 2022-02-02T18:16:00+00:00
 draft: false
 
@@ -8,13 +8,13 @@ image: /img/thumbs/kernel.png
 description: "Let's fix some errors before we can boot our bootloader on actual hardware"
 
 categories:
-  - Kernel Development
+  - Kernel_Development
 tags:
   - Programming
   - Assembly
   - Low-level
   - Operating systems
-  - Computer Science
+  - Computer_Science
 
 type: post
 ---
