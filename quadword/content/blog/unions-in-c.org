@@ -1,0 +1,175 @@
+#+title: Unions in C
+#+date: 2022-03-03T21:22:44+00:00
+#+draft: false
+#+image: /img/thumbs/unions.png
+#+description: Let's learn about unions in the C programming language
+#+categories[]: C
+#+tags[]: Programming Beginners
+#+type: post
+
+* Unions
+
+A union is a derived type (similar to a structure) with members that share the
+same storage space (sometimes the same type of construct needs different types
+of data). They are used mainly in advanced programming applications where it is
+necessary to store different types of data in the same storage area, they can
+be used to save space and for alternating data. A union does not waste storage
+on variables that are not being used.
+
+Each element in a union is called "member". You can define a union with several
+members, but only one member can contain a value at any given time, so you can
+only access one member at a given time.
+
+The members of a union can be of any datatype, in most cases, unions contain
+two or more datatypes and it is also your responsibility to ensure that the data
+in a union is referenced with the proper datatype - /referencing data in a union
+with a variable of the wrong type is a logic error/ - it can cause your program
+to crash.
+
+The operations that can be performed on a union are:
+
+- Assigning a union to another union of the same type.
+- Taking the address (&) of a union variable.
+- Accessing union members.
+
+** Examples
+
+Unions are particularly useful in embedded programming situations where direct
+access to the hardware/memory is needed - because you are saving memory -. You
+could use a union to represent a table that stores a mixture of types in some
+order, you could create an array of unions that store equal-sized units, each of
+which can hold a variety of datatypes, a union could represent a file containing
+different record types, a network interface containing different request types,
+and so much more.
+
+** Memory Allocation for a Union
+
+Although structs are similar to unions, the memory allocated for a union is
+quite different than for a struct. Every time you create an instance of a
+struct, the computer will lay out the fields in memory, one after the other,
+it allocates space for all its members separately. With a union, all the members
+have an offset of zero - there's one common storage space for all its members. A
+union is created with enough space for its largest field, the programmer then
+decides which value will be stored there. If you a union called quantity - for
+example -, with fields called count, weight and volume, whether you set the
+count, weight or volume field, the data will go into the same space in memory.
+
+[[/img/guides/c/union-and-structure-storage-comparison.gif]]
+
+Source: [[https://www.studytonight.com/c/unions-in-c.php][studytonight.com]]
+
+** Example
+
+Let's suppose you want to keep track of a quantity of something, it might be
+a count, a weight or a volume. You could create a structure like this:
+
+#+BEGIN_SRC C
+  struct fruit {
+    short count;
+    float weight;
+    float volume;
+  };
+#+END_SRC
+
+There are a few reasons why this is not a good idea:
+
+- It will take up more space in memory.
+- Someone might set more than one value.
+- There's nothing called quantity.
+
+A union should be used in this situations. You could specify something called
+quantity in a datatype, you can decide for each particular piece of data whether
+you are going to record a count, a weight or a volume against it.
+
+** Structs vs unions
+
+Even though unions are similar to structures, they are used for entirely different
+situations:
+
+- You should use a structure when your construct should be a group of other
+  things.
+- You should use a union when your construct can be one of many different things
+  but only one at a time.
+- Unions are typically used in situations where space is premium, but more
+  importantly, for exclusively alternate data.
+- Unions ensure that mutually exclusive states remain mutually exclusive.
+- Unions share a common storage space where structures store several datatypes
+  simultaneously, for example, a structure can hold an int, and a dobule and a
+  char, whereas a union can hold an int, or a double, or a char.
+
+* Defining a Union
+
+The definition for a union, is identical to that of a structure, except the
+keyword union is used where the keyword struct is otherwise specified. A union
+has the general form:
+
+#+BEGIN_SRC c
+  union [union_tag] {
+    type_1 identifier_1;
+    type_2 identifier_2;
+    ...
+    type_N identifier_N;
+  } optional_variable_definitions;
+#+END_SRC
+
+The union tag is optional and each member definition is what we are used to do.
+Note that, as well as structures, you can specify one or more union
+variables before the semicolon but it's optional. The union definition is
+usually placed in a header and included in all source files that use the union
+type.
+
+** Example
+
+Let's look at an example:
+
+#+BEGIN_SRC c
+  union _data {
+    int i;
+    float f;
+    char str[20];
+  } data;
+#+END_SRC
+
+The above does not declare `data' to contain three distinct members called `i',
+`f' and `str', it defines `data' to contain a single member that is either `i',
+`f' or `str'.
+
+A variable of type `_data' can store an integer, a floating-point number of a
+string of characters, a single variable (same memory location) can be used to
+store multiple types of data.
+
+The memory occupied by a union will be large enough to hold the largest member
+of the union, any variable of type `_data' will occupy 20 bytes of memory,
+because this is the maximum space which can be occupied by a character string.
+
+** Creating union variables
+
+When a union is defined, it creates a user-defined type, it doesn't allocate
+memory for it. To allocate memory for a given union type and work with it, we
+need to create variables.
+
+A union can be defined to contain as many members as you want, and they can be
+the members of a structure (they can even be arrays). Pointers to unions can
+also be declared, their syntax and rules for performing operations are the same
+as for structures.
+
+** Example
+
+#+BEGIN_SRC C
+  #include <stdio.h>
+
+  union car {
+    int i_value;
+    float f_value;
+    char c_value[40];
+  };
+
+  int
+  main (void)
+  {
+    union car c1, c2, *c3;
+    printf ("sizeof (c1): %zu\n", sizeof (c1));
+
+    return 0;
+  }
+#+END_SRC
